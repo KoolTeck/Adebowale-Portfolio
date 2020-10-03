@@ -433,6 +433,14 @@ a#active{
     .card-container form {
         width: auto;
     }
+
+    .links a {
+      background: none;
+      color: var(--primary-color);
+      padding: 0;
+      height: auto;
+      margin: 0 auto;
+  }
 }
 
 @media (max-width: 600px) {
@@ -508,16 +516,14 @@ section#connect a:hover{
         margin-top: 150px;
     }
 
-    
- section#connect h2{
-        color: #ffffff;
-    }
 
     h2.text-center {
         font-size:  0.8rem;
     }
     
     section#connect {
-        margin-top: 0;
+        margin-top: 50px;
     }
+
+    
 }

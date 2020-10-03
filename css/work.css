@@ -428,7 +428,15 @@ div.row{
   .project-details h2{
     font-size: 20px;
   }
+
+  .links a {
+    background: none;
+    color: var(--primary-color);
+    padding: 0;
+    height: auto;
+    margin: 0 auto;
  }
+}
 
 @media (max-width: 540px){
   

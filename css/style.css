@@ -215,6 +215,39 @@ hr{
     #navbarSupportedContent > ul.nav.navbar-nav.navbar-right a{
         border-bottom: 1px solid rgba(177, 92, 8, 0.185);
     }
+
+    .social-handles {
+        text-align: center;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: auto auto auto;
+      }
+    
+}
+
+@media screen and (max-width: 350px) {
+    
+.container h1 {
+    font-size: 1.8em;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  .fa-ul {
+    margin-left: 0;
+  }
+
+  .social-handles a {
+      padding: 7px;
+  }
+
+}
+
+@media screen and (max-width: 290px) {
+    .social-handles {
+        grid-template-columns: auto;
+      }
+    
 }
 
 
