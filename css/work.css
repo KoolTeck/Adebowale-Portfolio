@@ -1,0 +1,496 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    height: auto;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1f1f14;
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+
+:root{
+    --clr-grey-5: hsl(210, 22%, 49%);
+    --clr-grey-6: hsl(209, 23%, 60%);
+    --clr-grey-7: hsl(211, 27%, 70%);
+    --clr-grey-8: hsl(210, 31%, 80%);
+    --clr-grey-9: hsl(212, 33%, 89%);
+    --clr-grey-10: hsl(210, 36%, 96%);
+    --clr-white: #fff;
+    --primary-color:rgba(214, 114, 15, 0.493);
+    --clr-black: #222;
+    --clr-red-light: hsl(360, 71%, 66%);
+    --clr-secondary: rgba(136, 120, 120, 0.219);
+    --ff-primary: "Roboto", sans-serif;
+    --ff-secondary: "Open Sans", sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.25rem;
+    --radius: 0.5rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+    --fixed-width: 620px;
+  }
+  
+  /* global styles */
+  ul {
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: var(--spacing);
+    text-transform: capitalize;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    font-family: var(--ff-primary);
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+  h4 {
+    font-size: 0.875rem;
+  }
+  p {
+    margin-bottom: 1.25rem;
+    color: var(--clr-grey-5);
+  }
+  @media screen and (min-width: 800px) {
+    h1 {
+      font-size: 4rem;
+    }
+    h2 {
+      font-size: 2.5rem;
+    }
+    h3 {
+      font-size: 1.75rem;
+    }
+    h4 {
+      font-size: 1rem;
+    }
+    body {
+      font-size: 1rem;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+      line-height: 1;
+    }
+  }
+  
+  /* navbar */
+  nav {
+    background: #fff;
+    padding: 1rem 0.5rem;
+    color: var(--primary-color);
+    width: 100%;
+  }
+  /* fixed nav */
+  .fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: var(--clr-white);
+    box-shadow: var(--light-shadow);
+  }
+  
+  .scrol-links{
+    display: block;
+  }
+  
+  /* fixed nav */
+  .fixed-nav {
+    transition: var(--transition);
+  }
+  
+  .fixed-nav .links {
+    height: 99vh;
+    transition: var(--transition);
+  }
+  
+  .fixed-nav .links a {
+    color: var(--primary-color);
+    text-align: center;
+    display: block;
+    /* margin: 0 auto; */
+  }
+  .fixed-nav .links a:hover {
+    color: var(--clr-grey-5);
+  }
+  .fixed-nav .links-container {
+    height: auto !important;
+  }
+  .nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-toggle {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    background: transparent;
+    border-color: transparent;
+    animation: bounce 2s ease-in-out infinite;
+    transition: var(--transition);
+    cursor: pointer;
+  }
+  .nav-toggle:hover {
+    color: var(--clr-black);
+  }
+  
+  .nav-toggle:hover .fa{
+    color: var(--clr-black);
+  }
+  
+  .fa-times{
+    color: var(--clr-red-light);
+  }
+  
+  
+  
+  .logo {
+    height: 50px;
+  }
+  .links-container {
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+  }
+  
+  .links{
+    display: flex;
+  }
+  
+  /* animation */
+  @keyframes bounce {
+    0% {
+      transform: scale(1);
+    }
+  
+    50% {
+      transform: scale(1.5);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+  .show-links {
+    height: 100%;
+  }
+  .links a {
+    background: var(--clr-secondary);
+    color:var(--primary-color);
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    display: block;
+    transition: var(--transition);
+    font-weight: bold;
+    padding: 0.75rem 0;
+    height: 100%;
+  }
+  .links a:hover {
+    color: var(--clr-white);
+  }
+
+  
+  
+  @media screen and (min-width: 800px) {
+    nav {
+      background: var(--clr-black);
+    }
+    .nav-center {
+      width: 90vw;
+      max-width: 1170px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-header {
+      padding: 0;
+    }
+    .nav-toggle {
+      display: none;
+    }
+    .links-container {
+      height: auto !important;
+    }
+  
+    .links a {
+      background: transparent;
+      font-size: 1.1rem;
+      text-transform: capitalize;
+      letter-spacing: var(--spacing);
+      display: block;
+      transition: var(--transition);
+      margin: 0 1rem;
+      font-weight: bold;
+      padding: 0;
+    }
+  
+  }
+  
+  .hide-links{
+    display: none;
+  }
+  
+  .about-img{
+    display: none;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    transition: var(--transition);
+    animation: imgBounce 2s ease-in-out infinite;
+    margin-bottom: 20px;
+  }
+  
+  @keyframes imgBounce {
+    0% {
+      transform: scale(1);
+    }
+  
+    50% {
+      transform: scale(1.1);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  
+  }
+
+  .top-link {
+    font-size: 1.25rem;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    background-color:rgba(63, 207, 212, 0.4);
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    color: var(--primary-color);
+    animation: bounces 2s ease-in-out infinite; 
+    visibility: hidden;
+    z-index: -100;
+  }
+
+  .top-link:hover{
+    text-decoration: none;
+    color: var(--clr-white);
+  }
+  .show-link {
+    visibility: visible;
+    z-index: 200;
+  }
+  
+  @keyframes bounces  {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+/* cv download */
+  .download{
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    width: 18rem;
+    height: auto;
+  }
+  
+  .download button{
+    color: var(--primary-color);
+    padding: 3px;
+    margin: 0;
+    border-radius: var(--radius);
+    transition: var(--transition);
+  }
+  
+  .download button:hover{
+    box-shadow: var(--dark-shadow);
+    transform: scale(1.2);
+  }
+  
+
+  /* work styling */
+  .jumbotron{
+    margin-top: 10px;
+     background-image: url(../images/navbg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.jumbotron  h1{
+text-align: center;
+font-size: 2.6em;
+font-weight: bold;
+width: 50%;
+margin: 0 auto;
+background-color:rgba(214, 114, 15, 0.198);
+text-shadow: var(--dark-shadow);
+margin-bottom: 20px;
+}
+
+.project-details{
+    padding: 20px;
+   text-align: left;
+}
+
+.project-details h2{
+    font-size: 30px;
+}
+
+.project-details small{
+    color: var(--primary-color);
+}
+
+.project-details a{
+    color: var(--clr-white);
+}
+
+a#active{
+    color: var(--clr-white);
+  }
+  
+  a#active:hover{
+    color: var(--ff-primary);
+  }
+
+div.row{
+    text-align: center;
+}
+
+.btn{
+  background-color: rgba(214, 114, 15, 0.198);
+}
+
+.btn:hover{
+  transition: 1s all;
+}
+
+.card-deck{
+  margin-bottom:  15px;
+  box-shadow: var(--dark-shadow);
+}
+
+.card-deck img:hover{
+  transition: var(--transition);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+ .navbar-expand-lg p{
+   color: var(--primary-color);
+   text-align: center;
+   margin: 0 auto;
+ }
+
+ /* media quaries */ 
+ @media (max-width: 992px) {
+  .project-details h2{
+    font-size: 20px;
+  }
+ }
+
+@media (max-width: 540px){
+  
+.card-deck{ 
+  margin-left:  20px;
+}
+
+
+}
+
+
+@media (max-width: 445px){
+  
+  .card-deck{ 
+    margin-left: 0;
+  }
+
+}
+
+@media (max-width: 380px) {
+  .lead{
+    font-size: 12px;
+  }
+
+  .project-details h2 {
+    font-size: 13px;
+  }
+
+  .project-details h5 {
+    font-size: 10px;
+  }
+
+  .jumbotron h1{
+    font-size: 1.8rem;
+  }
+
+  .download{
+    display: grid;
+    grid-gap: 10px;
+    width: auto;
+  }
+
+  .download a:nth-child(2) button {
+    width: 106px;
+  }
+
+  .project-details{
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 279px) {
+  .jumbotron h1 {
+    font-size: 1rem;
+  }
+
+  .h1, h2, h3, h4{
+    letter-spacing: unset;
+  }
+
+  .project-details{
+    padding: 0;
+  }
+}

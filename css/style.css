@@ -1,0 +1,220 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/*
+
+/* Home Styling */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    height: auto;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1f1f14;
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+
+header > nav{
+    background:#1f1f14;
+}
+
+.navbar a{
+    color: rgba(214, 114, 15, 0.493);
+}
+
+button.navbar-toggler{
+    color:rgba(214, 114, 15, 0.493);
+    background-color:rgba(214, 114, 15, 0.157);
+}
+
+.navbar-toggler-icon{
+    color:rgba(214, 114, 15, 0.493);
+}
+
+#container{ 
+    background: linear-gradient(rgba(63, 207, 212, 0.4), rgba(0, 0, 0, 0.7)),
+    url(../images/backg.jpg) center/cover no-repeat;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 5px;
+}
+
+body > div > div{
+    background-color: rgba(214, 114, 15, 0.493);
+}
+
+body > div > div a,h2{
+    text-decoration: none;
+    color:#1f1f14 ;
+    transition:  ease-in 1s;
+}
+
+a:hover{
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+hr{
+    border-bottom: 2px solid rgba(214, 114, 15, 0.493) ;
+    margin:  auto;
+    width: 45%;
+    background-color: rgba(22, 21, 19, 0.8) ;
+}
+
+#container img{
+    margin-top: 100px;
+}
+
+.container h1{
+    text-align: center;
+    font-size: 2.6em;
+    font-weight: bold;
+    width: 50%;
+    margin: 0 auto;
+    text-shadow: 4px 7px 4px rgba(0, 0, 0, .2),
+                6px 8px 2px rgba(0, 0, 0, .4),
+                2px 6px 3px rgba(0, 0, 0, .8);
+}
+
+#container div li{
+    display: inline-block;
+    border-left: 3px solid  rgba(202, 163, 124, 0.493) ;
+    background-color: rgba(22, 21, 19, 0.5) ;
+}
+
+.fa-ul li{
+    text-transform: capitalize;
+}
+.card{
+    text-align: center;
+    background:rgba(22, 21, 19, 0.541);
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px;
+    border-bottom: 1px solid #ffffff;
+    max-width: 100%;
+}
+
+.card-title {
+    margin-bottom: 0.75rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.social-handles{
+    text-align: center;
+}
+
+.social-handles a{
+    padding: 20px;
+}
+
+.contact-container h2{
+    margin-top: 20px;
+}
+
+.list-unstyled {
+    margin-top: 80px;
+}
+
+#footer-card div.card{
+    background:#1f1f14;
+    color:  rgba(214, 114, 15, 0.493);
+    width: 100%;
+    position: relative;
+    margin-top: 30px;
+}
+
+.top-link {
+    font-size: 1.25rem;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    background-color:rgba(63, 207, 212, 0.4);
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    color: #ffffff;
+    animation: bounces 2s ease-in-out infinite; 
+    visibility: hidden;
+    z-index: -100;
+   
+  }
+  .show-link {
+    visibility: visible;
+    z-index: 200;
+  }
+  
+  @keyframes bounces  {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+/* cv download */
+  .download{
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    width: 18rem;
+    height: auto;
+  }
+  
+  .download button{
+    color: var(--primary-color);
+    padding: 3px;
+    margin: 0;
+    border-radius: var(--radius);
+    transition: var(--transition);
+  }
+  
+  .download button:hover{
+    box-shadow: var(--dark-shadow);
+    transform: scale(1.2);
+  }
+  
+
+
+/* home media quaries */
+
+@media screen and (max-width: 480px) {
+    span.navbar-toggler-icon{
+        background-image: url(images/burgs.png);
+    }
+
+    .top-link{
+        right: .9rem;
+    }
+}
+
+
+@media screen and (max-width: 991px) {
+    span.navbar-toggler-icon{
+        background-image: url(../images/burgs.png);
+    }
+
+    #navbarSupportedContent > ul.nav.navbar-nav.navbar-right a{
+        border-bottom: 1px solid rgba(177, 92, 8, 0.185);
+    }
+}
+
+

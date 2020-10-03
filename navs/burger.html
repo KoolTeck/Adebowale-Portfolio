@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"> -->
+    <style>
+.burger{
+    background-color: #404040;
+    background-image: url(../images/burgs.png) ;
+    background-position: 98% center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 45px;
+    display: block;
+    cursor: pointer;
+}
+nav ul{
+    overflow: hidden;
+    background: #505050;
+    height:0 ;
+}
+
+
+nav ul.open{
+    height: auto;
+    transition: all ease-in-out 2s;
+}
+
+nav li{
+    float: none;
+    width: 95%;
+    color: #ffffff;
+    /* margin: 20px 5% ; */
+    /* text-align: center; */
+    list-style-type: none;
+    padding: 10px;
+    border-bottom: 1px solid #ffff;
+    margin: 0;
+    display: block;
+}
+
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+     <nav>
+         <a class="burger"></a>
+         <ul>
+             <li>home</li>
+             <li>play</li>
+             <li>conc</li>
+             <li>put</li>
+             <li>flow</li>
+         </ul>
+     </nav>
+
+
+
+
+
+       
+		<script src="../js/jquery-3.3.1.min.js"></script>
+        <!-- <script src="../js/popper.min.js"></script> -->
+        <script src="script.js"></script>
+</body>
+</html>
